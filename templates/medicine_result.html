@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medicine Result</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-blue-700">
+
+<div class="bg-white shadow-2xl rounded-3xl p-10 w-full max-w-md text-center">
+
+    <!-- ICON -->
+    <div class="text-5xl mb-3">💊</div>
+
+    <!-- TITLE -->
+    <h1 class="text-2xl font-bold text-gray-900 mb-6">
+        Medicine Details
+    </h1>
+
+    <!-- NAME -->
+    <div class="bg-blue-100 p-4 rounded-xl mb-4">
+        <p class="text-blue-700 text-sm font-semibold">Name</p>
+        <p class="text-xl font-bold text-gray-900">
+            {{ name }}
+        </p>
+    </div>
+
+    <!-- USE -->
+    <div class="bg-green-100 p-4 rounded-xl mb-4">
+        <p class="text-green-700 text-sm font-semibold">Use</p>
+        <p class="text-gray-800 font-medium">
+            {{ use }}
+        </p>
+    </div>
+
+    <!-- PRECAUTION -->
+    <div class="bg-red-100 p-4 rounded-xl mb-6">
+        <p class="text-red-700 text-sm font-semibold">Precaution</p>
+        <p class="text-gray-800 font-medium">
+            {{ precaution }}
+        </p>
+    </div>
+
+    <!-- BUTTON -->
+    <a href="/"
+       class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full shadow-md transition">
+        ← Go Back
+    </a>
+
+</div>
+
+</body>
+</html>
