@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request
-import json, os
-import easyocr
-from rapidfuzz import process
-import requests
+import json
+
 
 app = Flask(__name__)
 
@@ -33,18 +31,6 @@ def medicine():
 
     if medicine_name:
         text = medicine_name.lower()
-
-    # 🥈 OPTION 2: IMAGE INPUT
-    elif 'image' in request.files:
-        image = request.files['image']
-
-        if image.filename != "":
-            path = os.path.join("static/uploads", image.filename)
-            image.save(path)
-
-            reader = easyocr.Reader(['en'])
-            result = reader.readtext(path, detail=0)
-            text = " ".join(result).lower()
 
     # 📂 Load JSON
     with open('data/medicine.json') as f:
