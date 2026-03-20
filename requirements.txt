@@ -1,2 +1,6 @@
 Flask
 gunicorn
+easyocr
+opencv-python-headless
+numpy
+Pillow
