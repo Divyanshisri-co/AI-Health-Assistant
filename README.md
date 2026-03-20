@@ -1,158 +1,201 @@
-# AI-Health-Assistant
-📌 About the Project
+# 🧠 AI Health Assistant
 
-AI Health Assistant is a web-based application designed to help users with basic healthcare support using intelligent features.
-The system provides two main functionalities:
+A web-based **AI-powered health assistant** that helps users identify medicines and get yoga recommendations based on health conditions.
 
-💊 Medicine Scanner
+---
 
-Users can:
+## 📌 Project Overview
 
--Upload an image of a medicine (future-ready for OCR)  OR  manually enter the medicine name
+AI Health Assistant is designed to provide **basic healthcare support** through an interactive and user-friendly interface.
 
--The system processes the input and returns:
+The application includes:
 
---Medicine name
+* 💊 Medicine Scanner (text-based input)
+* 🧘 Yoga Recommendation System
 
---Uses
+It is built using **Flask (backend)** and **Tailwind CSS (frontend)**, and is designed to be **scalable with AI and API integrations**.
 
---Precautions
+---
 
-🧘 Yoga Recommendation System
+## 🚀 Features
 
--Users select a health issue such as:
+### 💊 Medicine Scanner
 
---Stress
+* Users can enter a medicine name
+* Displays:
 
---Back Pain
+  * Medicine Name
+  * Uses
+  * Precautions
+* Data is fetched from a structured JSON dataset
 
---Digestion
+---
 
--The system suggests:
+### 🧘 Yoga Suggestion
 
---Relevant yoga poses
+* Users select a health issue:
 
---Benefits of each pose
+  * Stress
+  * Back Pain
+  * Digestion
+* Displays:
 
-🛠️ Tech Stack (Detailed)
-🔹 Frontend
+  * Yoga poses
+  * Benefits of each pose
 
-# HTML5
+---
 
--Structure of the web pages
+## 🛠️ Tech Stack
 
-# Tailwind CSS
+### 🔹 Frontend
 
---Utility-first CSS framework for fast UI design
+* **HTML5** – Structure of web pages
+* **Tailwind CSS** – Responsive UI design and styling
+* **JavaScript** – Dynamic interaction, form handling, Fetch API
 
---Used for responsive layout, gradients, cards, buttons
+---
 
-# JavaScript
+### 🔹 Backend
 
---Handles user interaction
+* **Python (Flask)** – Web framework for routing and logic
 
-Used for:
+---
 
---Dynamic UI switching (Medicine / Yoga)
+### 🔹 Data Handling
 
---Form submission using Fetch API
+* **JSON Files**
 
---Validation (input checking)
+  * `medicine.json` – Stores medicine details
+  * `yoga.json` – Stores yoga recommendations
 
-🔹 Backend
+---
 
-# Python (Flask)
+### 🔹 Deployment
 
---Lightweight web framework
+* Hosted on **Render**
+* Uses:
 
---Handles routing and server logic
+  * `gunicorn` as WSGI server
+  * `requirements.txt` for dependencies
 
---Processes form data from frontend
+---
 
-🔹 Data Handling
+## ⚙️ How It Works
 
-# JSON (medicine.json)
+### 💊 Medicine Flow
 
---Stores medicine-related information
+1. User enters medicine name
+2. Frontend sends request using Fetch API
+3. Flask backend processes input
+4. Searches data from JSON
+5. Displays structured result
 
-Used for quick lookup of:
+---
 
---Name
+### 🧘 Yoga Flow
 
---Use
+1. User selects a problem
+2. Form is submitted
+3. Flask retrieves relevant yoga data
+4. Results displayed with images and benefits
 
---Precaution
+---
 
-🔹 API / AI Integration (Extendable)
+## 📂 Project Structure
 
-Designed to support:
+```
+AI-Health-Assistant/
+│
+├── app.py
+├── requirements.txt
+├── Procfile
+│
+├── data/
+│   ├── medicine.json
+│   └── yoga.json
+│
+├── templates/
+│   ├── index.html
+│   ├── medicine_result.html
+│   └── yoga_result.html
+│
+├── static/
+│   ├── images/
+│   └── css/
+│
+└── README.md
+```
 
-# OpenFDA API (medicine data)
+---
 
-# OCR tools (like Tesseract / EasyOCR)
+## ▶️ How to Run Locally
 
+1. Clone repository:
 
-🔹 File Handling
+```bash
+git clone https://github.com/your-username/AI-Health-Assistant.git
+```
 
-# FormData (JavaScript)
+2. Navigate to project:
 
-Used to send image + text data to backend
+```bash
+cd AI-Health-Assistant
+```
 
-⚙️ Project Workflow (Very Important)
-💊 Medicine Flow
-User Input (Image / Text)
-        ↓
-Frontend (JS + FormData)
-        ↓
-Flask Backend (/medicine route)
-        ↓
-Process Input
-   → If text → search JSON
-   → If image → (future OCR)
-        ↓
-Fetch Data
-        ↓
-Render Result Page
-# -----------------------------------
-🧘 Yoga Flow
-User selects problem
-        ↓
-Form submit (/yoga)
-        ↓
-Flask processes input
-        ↓
-Fetch yoga data
-        ↓
-Render yoga_result.html
+3. Install dependencies:
 
-🎨 UI/UX Features
+```bash
+pip install flask
+```
 
-Responsive design (Mobile + Desktop)
+4. Run application:
 
-Gradient backgrounds
+```bash
+python app.py
+```
 
-Card-based layout
+5. Open browser:
 
-Interactive UI (clickable options)
+```
+http://127.0.0.1:5000/
+```
 
-Dynamic content rendering
+---
 
-Clean and minimal design
+## 🌐 Live Demo
 
-🎯 Key Highlights
+👉 Add your deployed link here
 
-Combines web development + AI-ready architecture
+```
+https://your-app.onrender.com
+```
 
-Supports image + text input handling
+---
 
-Designed for scalability (API + ML integration)
+## 🎯 Key Highlights
 
-Beginner-friendly but extendable to advanced AI system
+* Responsive UI (Mobile + Desktop)
+* Clean and modern design using Tailwind CSS
+* Structured backend using Flask
+* Real-world healthcare use case
+* Scalable for AI and API integration
 
-🚀 Future Enhancements
+---
 
-📊 User history tracking
+## 🚀 Future Improvements
 
-🧠 Personalized health suggestions
+* 🔍 OCR integration for medicine detection
+* 🤖 AI-based medicine analysis
+* 🌐 Integration with medical APIs
+* 📊 User history tracking
+* 🎨 Advanced UI enhancements
 
-author : Divyanshisri-co
+---
+
+## 👩‍💻 Author
+
+* Divyanshi
+
+---
+
+
