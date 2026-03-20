@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Health Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center min-h-screen">
+
+<div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-3xl text-center">
+
+    <!-- TITLE -->
+    <h1 id="mainTitle" class="text-3xl font-bold mb-8 text-gray-800">
+        AI Health Assistant
+    </h1>
+
+    <!-- OPTION CARDS -->
+    <div id="options" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div onclick="showMedicine()"
+            class="cursor-pointer p-8 rounded-2xl bg-blue-100 hover:bg-blue-200 transition transform hover:scale-105 shadow-md">
+            💊
+            <h2 class="text-xl font-semibold text-gray-700 mt-2">
+                Medicine Scanner
+            </h2>
+        </div>
+
+        <div onclick="showYoga()"
+            class="cursor-pointer p-8 rounded-2xl bg-green-100 hover:bg-green-200 transition transform hover:scale-105 shadow-md">
+            🧘
+            <h2 class="text-xl font-semibold text-gray-700 mt-2">
+                Yoga Suggestion
+            </h2>
+        </div>
+
+    </div>
+
+    <!-- MEDICINE SECTION (NOW INSIDE BOX ✅) -->
+    <div id="medicineBox" class="hidden mt-6 text-left">
+
+        <h2 class="text-lg font-semibold mb-3 text-center">
+            Select or Type Medicine Name
+        </h2>
+
+        <input type="file" class="border p-2 w-full mb-3 rounded">
+
+        <p class="text-center text-gray-400 mb-2">OR</p>
+
+        <input type="text" name="medicine_name" placeholder="Type medicine name..."
+            class="border p-2 w-full mb-4 rounded">
+
+        <button onclick="submitMedicine()"
+            class="bg-blue-500 text-white px-4 py-2 rounded w-full">
+            Submit
+        </button>
+
+        <button onclick="goBack()" class="text-sm text-gray-500 mt-3 block mx-auto">
+            ← Back
+        </button>
+    </div>
+
+    <!-- YOGA SECTION (NOW INSIDE BOX ✅) -->
+    <div id="yogaBox" class="hidden mt-6 text-left">
+
+        <h2 class="text-lg font-semibold mb-3 text-center">
+            Enter Your Problem
+        </h2>
+
+        <form action="/yoga" method="POST">
+            <select name="problem" class="border p-2 w-full mb-4 rounded">
+                <option value="">-- Select a problem --</option>
+                <option value="back pain">Back Pain</option>
+                <option value="stress">Stress</option>
+                <option value="digestion">Digestion</option>
+            </select>
+
+            <button type="submit"
+                class="bg-green-500 text-white px-4 py-2 rounded w-full">
+                Submit
+            </button>
+        </form>
+
+        <button onclick="goBack()" class="text-sm text-gray-500 mt-3 block mx-auto">
+            ← Back
+        </button>
+    </div>
+
+</div>
+
+<!-- Floating Welcome Message -->
+<div id="welcomeBox"
+     class="fixed bottom-5 right-5 bg-blue-500 text-white px-4 py-3 rounded-xl shadow-lg cursor-pointer animate-bounce">
+    
+    <span onclick="toggleMessage()">Hello 👋</span>
+
+    <div id="messageContent" class="hidden mt-2 text-sm">
+        Welcome to AI Health Assistant 💙<br>
+        How can I help you today?
+    </div>
+</div>
+
+
+<script>
+    function showMedicine() {
+        document.getElementById("options").style.display = "none";
+        document.getElementById("medicineBox").classList.remove("hidden");
+        // 🔥 change title
+        document.getElementById("mainTitle").innerText = "Medicine Scanner";
+        
+    }
+
+    function showYoga() {
+        document.getElementById("options").style.display = "none";
+        document.getElementById("yogaBox").classList.remove("hidden");
+        document.getElementById("mainTitle").innerText = "Yoga SUGGESTION";
+    }
+
+    function goBack() {
+        document.getElementById("options").style.display = "block";
+        document.getElementById("medicineBox").classList.add("hidden");
+        document.getElementById("yogaBox").classList.add("hidden");
+    }
+
+    function toggleMessage() {
+        let msg = document.getElementById("messageContent");
+        msg.classList.toggle("hidden");
+    }
+
+    function submitMedicine() {
+        const fileInput = document.querySelector('input[type="file"]');
+        const textInput = document.querySelector('input[name="medicine_name"]');
+
+        const formData = new FormData();
+
+        if (fileInput.files.length > 0) {
+            formData.append("image", fileInput.files[0]);
+        }
+
+        if (textInput.value.trim() !== "") {
+            formData.append("medicine_name", textInput.value);
+        }
+
+        // 🚨 VALIDATION (IMPORTANT)
+        if (fileInput.files.length === 0 && textInput.value.trim() === "") {
+            alert("Please upload image or enter medicine name");
+            return;
+        }
+
+        fetch("/medicine", {
+            method: "POST",
+            body: formData
+        })
+        .then(res => res.text())
+        .then(html => {
+            // ✅ THIS WAS MISSING
+            document.open();
+            document.write(html);
+            document.close();
+        });
+    }
+
+</script> 
+
+
+</body>
+</html>
