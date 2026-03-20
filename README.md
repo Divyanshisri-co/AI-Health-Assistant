@@ -8,96 +8,96 @@ The system provides two main functionalities:
 
 Users can:
 
-Upload an image of a medicine (future-ready for OCR)
+-Upload an image of a medicine (future-ready for OCR)
 
-OR manually enter the medicine name
+             OR 
+manually enter the medicine name
 
-The system processes the input and returns:
+-The system processes the input and returns:
 
-Medicine name
+--Medicine name
 
-Uses
+--Uses
 
-Precautions
+--Precautions
 
 🧘 Yoga Recommendation System
 
-Users select a health issue such as:
+-Users select a health issue such as:
 
-Stress
+--Stress
 
-Back Pain
+--Back Pain
 
-Digestion
+--Digestion
 
-The system suggests:
+-The system suggests:
 
-Relevant yoga poses
+--Relevant yoga poses
 
-Benefits of each pose
+--Benefits of each pose
 
 🛠️ Tech Stack (Detailed)
 🔹 Frontend
 
-HTML5
+# HTML5
 
-Structure of the web pages
+-Structure of the web pages
 
-Tailwind CSS
+# Tailwind CSS
 
-Utility-first CSS framework for fast UI design
+--Utility-first CSS framework for fast UI design
 
-Used for responsive layout, gradients, cards, buttons
+--Used for responsive layout, gradients, cards, buttons
 
-JavaScript
+# JavaScript
 
-Handles user interaction
+--Handles user interaction
 
 Used for:
 
-Dynamic UI switching (Medicine / Yoga)
+--Dynamic UI switching (Medicine / Yoga)
 
-Form submission using Fetch API
+--Form submission using Fetch API
 
-Validation (input checking)
+--Validation (input checking)
 
 🔹 Backend
 
-Python (Flask)
+# Python (Flask)
 
-Lightweight web framework
+--Lightweight web framework
 
-Handles routing and server logic
+--Handles routing and server logic
 
-Processes form data from frontend
+--Processes form data from frontend
 
 🔹 Data Handling
 
-JSON (medicine.json)
+# JSON (medicine.json)
 
-Stores medicine-related information
+--Stores medicine-related information
 
 Used for quick lookup of:
 
-Name
+--Name
 
-Use
+--Use
 
-Precaution
+--Precaution
 
 🔹 API / AI Integration (Extendable)
 
 Designed to support:
 
-OpenFDA API (medicine data)
+# OpenFDA API (medicine data)
 
-OCR tools (like Tesseract / EasyOCR)
+# OCR tools (like Tesseract / EasyOCR)
 
-LLM APIs (like Groq / OpenAI) for summarization
 
 🔹 File Handling
 
-FormData (JavaScript)
+# FormData (JavaScript)
 
 Used to send image + text data to backend
 
@@ -116,6 +116,7 @@ Process Input
 Fetch Data
         ↓
 Render Result Page
+# -----------------------------------
 🧘 Yoga Flow
 User selects problem
         ↓
@@ -126,6 +127,7 @@ Flask processes input
 Fetch yoga data
         ↓
 Render yoga_result.html
+
 🎨 UI/UX Features
 
 Responsive design (Mobile + Desktop)
