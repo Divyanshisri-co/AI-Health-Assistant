@@ -1,0 +1,27 @@
+{
+  "back pain": [
+    {
+      "name": "Bhujangasana",
+      "image": "images/cobra.jpg",
+      "benefit": "Relieves back pain"
+    },
+    {
+      "name": "Child Pose",
+      "image": "images/childpose.jpg",
+      "benefit": "Stretches spine"
+    }
+  ],
+
+  "stress": [
+    {
+      "name": "Meditation",
+      "image": "images/meditation.jpg",
+      "benefit": "Calms mind"
+    },
+    {
+      "name": "Pranayama",
+      "image": "images/pranayama.jpg",
+      "benefit": "Improves breathing"
+    }
+  ]
+}
