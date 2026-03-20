@@ -8,10 +8,7 @@ The system provides two main functionalities:
 
 Users can:
 
--Upload an image of a medicine (future-ready for OCR)
-
-             OR 
-manually enter the medicine name
+-Upload an image of a medicine (future-ready for OCR)  OR  manually enter the medicine name
 
 -The system processes the input and returns:
 
