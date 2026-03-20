@@ -21,8 +21,6 @@ def yoga():
 
 @app.route('/medicine', methods=['POST'])
 def medicine():
-    import json
-    import easyocr
 
     text = ""
 
