@@ -1,0 +1,88 @@
+{
+    "silicea": {
+        "name": "SILICEA",
+        "use": "INDICATIONS Condition listed above or as directed by the physician",
+        "precaution": "WARNINGS This product is to be used for self-limiting conditions If symptoms do not improve in 4 days, or worsen, discontinue use and seek assistance of health professional. As with any drug, if you a"
+    },
+    "unknown": {
+        "name": "Unknown",
+        "use": "INDICATIONS AND USAGE NP Thyroid \u00ae tablets (thyroid tablets, USP) are indicated: 1. As replacement or supplemental therapy in patients with hypothyroidism of any etiology, except transient hypothyroid",
+        "precaution": "WARNINGS Drugs with thyroid hormone activity, alone or together with other therapeutic agents, have been used for the treatment of obesity. In euthyroid patients, doses within the range of daily hormo"
+    },
+    "betadine": {
+        "name": "Betadine",
+        "use": "Uses First aid to help prevent infection in minor cuts scrapes burns",
+        "precaution": "Warnings For external use only"
+    },
+    "naproxen": {
+        "name": "Naproxen",
+        "use": "1 INDICATIONS AND USAGE Naproxen tablets and naproxen sodium tablets are indicated for: the relief of the signs and symptoms of: \u2022 rheumatoid arthritis \u2022 osteoarthritis \u2022 ankylosing spondylitis \u2022 Poly",
+        "precaution": "No precautions available"
+    },
+    "moisturizing antibacterial": {
+        "name": "Moisturizing Antibacterial",
+        "use": "Use For handwashing to decrease bacteria on the skin",
+        "precaution": "Warnings For external use only: hands only"
+    },
+    "quick action": {
+        "name": "Quick Action",
+        "use": "Use for the treatment of acne",
+        "precaution": "Warnings For external use only"
+    },
+    "mekinist": {
+        "name": "Mekinist",
+        "use": "1 INDICATIONS AND USAGE MEKINIST is a kinase inhibitor indicated as a single agent for the treatment of BRAF-inhibitor treatment-na\u00efve patients with unresectable or metastatic melanoma with BRAF V600E",
+        "precaution": "No precautions available"
+    },
+    "glimepiride": {
+        "name": "Glimepiride",
+        "use": "1 INDICATIONS AND USAGE Glimepiride tablets are indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus [see Clinical Studies (14.1) ]. Limitat",
+        "precaution": "No precautions available"
+    },
+    "methocarbamol": {
+        "name": "Methocarbamol",
+        "use": "INDICATIONS AND USAGE Methocarbamol tablets, USP are indicated as an adjunct to rest, physical therapy, and other measures for the relief of discomfort associated with acute, painful musculoskeletal c",
+        "precaution": "WARNINGS Since methocarbamol may possess a general CNS depressant effect, patients receiving Methocarbamol tablets, USP should be cautioned about combined effects with alcohol and other CNS depressant"
+    },
+    "anti itch": {
+        "name": "anti itch",
+        "use": "Uses \u2022 temporarily relieves itching associated with minor skin irritations, inflammation, and rashes due to: \u2022 eczema \u2022 psoriasis \u2022 poison ivy, oak, sumac \u2022 insect bites \u2022 detergents \u2022 jewelry \u2022 cosme",
+        "precaution": "Warnings For external use only Do not use \u2022 in the genital area if you have a vaginal discharge. Consult a doctor. \u2022 for the treatment of diaper rash. Consult a doctor. When using this product \u2022 avoid"
+    },
+    "varenicline": {
+        "name": "Varenicline",
+        "use": "1 INDICATIONS AND USAGE Varenicline tablets are indicated for use as an aid to smoking cessation treatment. Varenicline tablets are a nicotinic receptor partial agonist indicated for use as an aid to ",
+        "precaution": "No precautions available"
+    },
+    
+    "paracetamol": {
+        "name": "Paracetamol",
+        "use": "Used for fever and mild to moderate pain",
+        "precaution": "Do not exceed recommended dose"
+    },
+
+    "crocin": {
+        "name": "Crocin",
+        "use": "Relieves fever and body pain",
+        "precaution": "Avoid overdose"
+    },
+
+    "ibuprofen": {
+        "name": "Ibuprofen",
+        "use": "Reduces inflammation and pain",
+        "precaution": "Take after meals"
+    },
+
+    "aspirin": {
+        "name": "Aspirin",
+        "use": "Pain relief and blood thinning",
+        "precaution": "Not for children without doctor advice"
+    },
+
+    "amoxicillin": {
+        "name": "Amoxicillin",
+        "use": "Antibiotic for bacterial infections",
+        "precaution": "Complete full course"
+    }
+
+}
