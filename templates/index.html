@@ -101,7 +101,6 @@
     function showMedicine() {
         document.getElementById("options").style.display = "none";
         document.getElementById("medicineBox").classList.remove("hidden");
-        // 🔥 change title
         document.getElementById("mainTitle").innerText = "Medicine Scanner";
         
     }
@@ -124,22 +123,17 @@
     }
 
     function submitMedicine() {
-        const fileInput = document.querySelector('input[type="file"]');
         const textInput = document.querySelector('input[name="medicine_name"]');
 
         const formData = new FormData();
-
-        if (fileInput.files.length > 0) {
-            formData.append("image", fileInput.files[0]);
-        }
 
         if (textInput.value.trim() !== "") {
             formData.append("medicine_name", textInput.value);
         }
 
-        // 🚨 VALIDATION (IMPORTANT)
-        if (fileInput.files.length === 0 && textInput.value.trim() === "") {
-            alert("Please upload image or enter medicine name");
+        
+        if ( textInput.value.trim() === "") {
+            alert("Please enter medicine name");
             return;
         }
 
@@ -149,7 +143,7 @@
         })
         .then(res => res.text())
         .then(html => {
-            // ✅ THIS WAS MISSING
+            
             document.open();
             document.write(html);
             document.close();
